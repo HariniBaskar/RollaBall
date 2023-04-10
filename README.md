@@ -43,7 +43,62 @@ Copy the PlayerController and drag to Script folder
 Double click the PlayerController file and type the coding
 
 ## Program:
+```
+Developed by: Harini.B
+Reg No: 212221230035
+```
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Program : MonoBehaviour
+{
+    public float Xforce = 5.0f;
+    public float Zforce = 5.0f;
+    public float Yforce = 300f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        float x = 0.0f;
+        float y = 0.0f;
+        float z = 0.0f;
+        if (Input.GetKey(KeyCode.A))
+        {
+            x = x - Xforce;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x = x + Xforce;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            z = z + Zforce;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            z = z - Zforce;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            y = Yforce;
+        }
+        GetComponent<Rigidbody>().AddForce(x, y, z);
+
+    }
+}
+
+```
 
 ## Output:
+![EXP1 (1)](https://user-images.githubusercontent.com/93427253/230854813-6e30a182-4900-4e0b-aa9a-ddf5931bdaf8.jpg)
 
+![EXP2](https://user-images.githubusercontent.com/93427253/230854884-da7cff14-710c-4508-8aa5-7563d92ca108.jpg)
 ## Result:
+Thus, The 3D application for Roll the Ball in unity is developed successfully.
